@@ -1,4 +1,4 @@
-const { src, dest, watch, parallel} = require('gulp')
+const { src, dest, watch, parallel, series} = require('gulp')
 
 const browserSync = require('browser-sync').create()
 const sass = require('gulp-sass')(require('sass'))
@@ -6,6 +6,24 @@ const pug = require('gulp-pug')
 const useref = require('gulp-useref')
 const concat = require('gulp-concat')
 const uglify = require('gulp-uglify-es').default
+const imagemin = require('gulp-imagemin');
+
+
+function images() {
+    return src([
+        'app/images/*',
+    ])
+    .pipe(imagemin([
+        imagemin.optipng(),
+        imagemin.mozjpeg({
+             progressive: true
+        })
+        ], 
+        {
+            verbose: true
+        }))
+    .pipe(dest('dist/images'))
+}
 
 function scripts() {
     return src([
@@ -68,11 +86,23 @@ function browser() {
     })
 }
 
+function building() {
+    return src([
+        'app/css/style.min.css',
+        'app/js/main.min.js',
+        'app/*.html'
+    ], { base: 'app' })
+    .pipe(dest('dist'))
+}
+
+exports.images = images
 exports.styles = styles
 exports.scripts = scripts
 exports.puged = puged
 exports.pugedIncludes = pugedIncludes
 exports.watching = watching
 exports.browser = browser
+exports.building = building
 
+exports.build = series(building)
 exports.default = parallel(styles, scripts, pugedIncludes, puged, browser, watching)
