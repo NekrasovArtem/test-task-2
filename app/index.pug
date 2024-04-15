@@ -1,0 +1,153 @@
+- 
+    const latestNews = [
+        {
+            image: 'images/news-1.jpg', 
+            category: 'Коммуналка',
+            date: '02/01/2021',
+            name: 'Домой по светлой улице. В Златоусте завершили монтаж сразу двух новых линий наружного освещения',
+        },
+        {
+            image: 'images/news-2.jpg', 
+            category: 'Медицина',
+            date: '02/01/2021',
+            name: 'Ключи от медицинской помощи. «Городская больница» Златоуста получила новые спецавтомобили',
+        },
+        {
+            image: 'images/news-3.jpg', 
+            category: 'Коммуналка',
+            date: '02/01/2021',
+            name: 'Домой по светлой улице. В Златоусте завершили монтаж сразу двух новых линий наружного освещения',
+        },
+        {
+            image: 'images/news-4.jpg', 
+            category: 'Коммуналка',
+            date: '02/01/2021',
+            name: 'На перегоне между районом машзавода и проспект Гагарина ограничили максимальную скорость до 40 километров в час',
+        },
+        {
+            image: 'images/news-5.jpg', 
+            category: 'Медицина',
+            date: '02/01/2021',
+            name: 'Теплоснабжение без перебоев. Такую задачу перед всеми ответственными службами  поставил глава округа Максим Пекарский',
+        },
+        {
+            image: 'images/news-6.jpg', 
+            category: 'Коммуналка',
+            date: '02/01/2021',
+            name: 'На перегоне между районом машзавода и проспект Гагарина ограничили максимальную скорость до 40 километров в час',
+        },
+    ];
+    const news = [
+        {
+            image: 'images/news-7.jpg', 
+            date: '19/01/2021',
+            name: 'Спортивный центр, доступный для всех жителей города и района метзавода. Бассейн «Сталь» теперь стал муниципальным',
+        },
+        {
+            image: 'images/news-8.jpg', 
+            date: '15/01/2021',
+            name: 'Условия для воспитания и образования в Златоусте – одно из приоритетных направлений',
+        },
+        {
+            image: 'images/news-9.jpg', 
+            date: '24/12/2020',
+            name: 'Реализовали давно задуманные планы. На златоустовском «Заводе «Стройтехника» открылся ещё один производственный корпус',
+        },
+        {
+            image: 'images/news-7.jpg', 
+            date: '19/01/2021',
+            name: 'Спортивный центр, доступный для всех жителей города и района метзавода. Бассейн «Сталь» теперь стал муниципальным',
+        },
+    ]
+
+html(lang="ru-RU")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/style.min.css")
+        title="ЗТВ - Златоустовское телевидение"
+    body 
+        include includes/header.pug
+        main 
+            section.article 
+                div.article__wrapper 
+                    button="Читать" 
+                    img(src="images/news-photo.png", alt="Фото")
+                    div.article__content 
+                        div 
+                            span="Общество"
+                            p="Гонка сильнейших. На стадионе имени Светланы Ишмуратовой стартовал Чемпионат по биатлону"
+                        button="Читать"
+                    div.article__slider 
+                        div.slider__wrapper 
+                            img(src="images/slide-1.jpg", alt="Фото слайда")
+                            div.slider__slide-info 
+                                span="Нацпроект" 
+                                p="Безопасные и качественные автомобильные дороги" 
+                            div.slider__pagination 
+                                span.active-page 
+                                    span
+                                span 
+                                span 
+                                span 
+                                span 
+                            div.slider__navigation 
+                                button 
+                                    img(src="images/prev-page-arrow.svg", alt="")
+                                button 
+                                    img(src="images/next-page-arrow.svg", alt="")
+            section.latest-news 
+                div.latest-news__wrapper 
+                    div.latest-news__head 
+                        h2="Свежие новости"
+                        a(href="./news.html")
+                            button="Все новости" 
+                    div.latest-news__content 
+                        each item in latestNews
+                            div.latest-news__content-item 
+                                img(src=`${item.image}`, alt="Фото новости")
+                                div
+                                    span.content-item-category #{item.category}
+                                    span.content-item-date #{item.date}
+                                p #{item.name}
+                                a 
+                                    img(src="images/top-right-arrow.svg", alt="Подробнее")
+                    div.latest-news__banner 
+                        img(src="images/banner.svg", alt="ЗТВ - Златоустовское телевидение")
+            section.news 
+                div.news__wrapper 
+                    div.news__head 
+                        h2="Вектор развития"
+                        div 
+                            button 
+                                img(src="images/prev-arrow.svg", alt="Предыдущая новость")
+                            button 
+                                img(src="images/next-arrow.svg", alt="Следующая новость")
+                    div.news__content 
+                        each item in news 
+                            div.news__item 
+                                img(src=`${item.image}`, alt="Фото новости")
+                                span #{item.date}
+                                p #{item.name}
+                                a 
+                                    img(src="images/top-right-arrow.svg", alt="Подробнее")
+                    button="Больше новостей"
+            section.releases
+                div.releases__wrapper 
+                    h2="Премьерные выпуски"
+                    div.releases__content 
+                        img(src="images/release.jpg", alt="Премьерный выпуск")
+                        div.releases__items 
+                            .releases__item.releases__item-active 
+                                span="02/01/2021"
+                                h3="«Территория закона» 26.01.2021"
+                                a 
+                                    img(src="images/top-right-arrow-white.svg", alt="")
+                            div.releases__item 
+                                span="02/01/2021"
+                                h3="«Сделано в Златоусте» №1 (Никон)"
+                            div.releases__item 
+                                span="02/01/2021"
+                                h3="«Депутатский час» 22.01.2021"
+                    button="Все выпуски"
+        include includes/footer.pug
