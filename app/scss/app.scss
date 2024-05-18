@@ -1,0 +1,125 @@
+@import "../../node_modules/vanillajs-datepicker/sass/datepicker";
+@import "../../node_modules/choices.js/src/styles/choices.scss";
+@import "_variables.scss";
+@import "_extends.scss";
+@import "_mixins.scss";
+@import "main.scss";
+@import "_header.scss";
+@import "_footer.scss";
+@import "index.scss";
+@import "news.scss";
+@import "one-news.scss";
+
+@media screen and (max-width: 320px) {
+    .header {
+        padding: 16px 24px;
+        border-bottom: 2px solid $primary-color;
+    }
+
+    .header__wrapper {
+        padding: 0;
+        border: none;
+    }
+
+    .header__top {
+        justify-content: space-between;
+        button {
+            display: none;
+        }
+        a {
+            img {
+                width: 104px;
+                height: auto;
+            }
+        }
+        div {
+            display: none;
+        }
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .header__megaphone {
+        display: block;
+    }
+
+    .header__bottom {
+        display: none;
+    }
+
+    .section {
+        padding: 0 24px;
+    }
+
+    .article {
+        padding: 34px 24px 52px;
+        border: none;
+    }
+
+    .article__slider {
+        display: none;
+    }
+
+    .article__wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .article__content {
+        div {
+            p {
+                font-size: 22px;
+                font-weight: 500;
+                line-height: 28px;
+            }
+        }
+    }
+
+    .latest-news__wrapper {
+        padding: 22px 0 52px;
+        border-top: 2px solid $primary-color;
+    }
+
+    .latest-news__head {
+        h2 {
+            font-size: 40px;
+            line-height: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+        }
+        a {
+            display: none;
+        }
+    }
+
+    .latest-news__content-item {
+        height: auto; 
+        a {
+            display: none;
+        }
+    }
+
+    .releases {
+        padding: 0;
+    }
+
+    .releases__wrapper {
+        padding: 52px 24px;
+        h2 {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+        }
+    }
+
+    .releases__item {
+        display: none;
+    }
+
+    .releases__item-active {
+        display: flex;
+    }
+}

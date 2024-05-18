@@ -1,45 +1,43 @@
 if whiteFooter == true
-    footer.footer-white 
+    footer.footer.footer-white 
         div.footer__wrapper
-            div.footer__socials 
-                span="Подписывайтесь на нас:"
-                div.footer__socials-icons 
-                    a(href="#")
+            div.footer__top 
+                span.footer__subscribe="Подписывайтесь на нас:"
+                div.footer__icons 
+                    a.footer__icon(href="#")
                         img(src="images/youtube.svg", alt="YouTube") 
-                    a(href="#")
+                    a.footer__icon(href="#")
                         img(src="images/facebook.svg", alt="Facebook") 
-                    a(href="#")
+                    a.footer__icon(href="#")
                         img(src="images/vk.svg", alt="Вконтакте") 
-                    a(href="#")
+                    a.footer__icon(href="#")
                         img(src="images/однокласники.svg", alt="Одноклассники")
-                    a(href="#")
+                    a.footer__icon(href="#")
                         img(src="images/instagram.svg", alt="Instagram")
-            div.footer__copyright 
-                div.footer__copyright-left 
-                    span="© 2021 «Златоустовское телевидение»"
-                    a(href="")="Политика конфиденциальности" 
-                img(src="images/xpage-logo.svg", alt="Логотип xpage")
+            div.footer__bottom 
+                div.footer__left
+                    span.footer__copyright="© 2021 «Златоустовское телевидение»"
+                    a.footer__policy(href="")="Политика конфиденциальности" 
+                img.footer__developers(src="images/xpage-logo.svg", alt="Логотип xpage")
 else 
-    footer 
+    footer.footer 
         div.footer__wrapper
-            div.footer__socials 
-                span="Подписывайтесь на нас:"
-                div.footer__socials-icons 
-                    a(href="#")
+            div.footer__top 
+                span.footer__subscribe="Подписывайтесь на нас:"
+                div.footer__icons 
+                    a.footer__icon(href="#")
                         img(src="images/youtube.svg", alt="YouTube") 
-                    a(href="#")
+                    a.footer__icon(href="#")
                         img(src="images/facebook.svg", alt="Facebook") 
-                    a(href="#")
+                    a.footer__icon(href="#")
                         img(src="images/vk.svg", alt="Вконтакте") 
-                    a(href="#")
+                    a.footer__icon(href="#")
                         img(src="images/однокласники.svg", alt="Одноклассники")
-                    a(href="#")
+                    a.footer__icon(href="#")
                         img(src="images/instagram.svg", alt="Instagram")
-            div.footer__copyright 
-                div.footer__copyright-left 
-                    span="© 2021 «Златоустовское телевидение»"
-                    a(href="")="Политика конфиденциальности" 
-                img(src="images/xpage-logo.svg", alt="Логотип xpage")
-script(src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/datepicker.min.js") 
-script(src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/locales/ru.js") 
-script(src="js/main.min.js") 
+            div.footer__bottom 
+                div.footer__left
+                    span.footer__copyright="© 2021 «Златоустовское телевидение»"
+                    a.footer__policy(href="")="Политика конфиденциальности" 
+                img.footer__developers(src="images/xpage-logo.svg", alt="Логотип xpage")
+script(src="./js/main.min.js") 

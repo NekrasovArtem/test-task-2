@@ -1,0 +1,74 @@
+// Общие стили
+
+html, body,
+main, section,
+div, img {
+    box-sizing: border-box;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background: $body-background;
+    overflow-x: hidden;
+}
+
+.main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section {
+    width: 100%;
+    max-width: 1520px;
+    height: auto;
+}
+
+.section__title {
+    max-width: 600px;
+    height: auto;
+    font-size: 100px;
+    line-height: 90px;
+    color: $primary-color;
+    font-weight: 700;
+    font-family: $font-family;
+    margin: 0;
+}
+
+.section__link {
+    width: 165px;
+    height: auto;
+    @include original__button($color: $primary-color, $background: $body-background);
+    @extend %font_title_sm;
+    text-decoration: none;
+}
+
+.breadcrumbs {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0 4px;
+    li {
+        @extend %font_title_sm;
+        text-align: left;
+        color: $gray-color;
+    }
+    li+li::before {
+        padding-left: 8px;
+        content: "/\00a0";
+    }
+}

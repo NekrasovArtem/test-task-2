@@ -1,26 +1,25 @@
+include includes/mixins.pug
+
 -
     const whiteFooter = true;
+
+doctype html
 html(lang='ru-RU')
-    head
-        meta(charset='utf-8')
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="css/style.min.css")
-        title="Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля"
+    +head("Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля")
     body
         include includes/header.pug
-        main 
-            section.one-news 
-                div.one-news__title 
-                    h1="Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля"
-                    ul 
-                        li="Главная"
-                        li="Новости"
-                        li="Медицина"
-                div.one-news__wrapper 
-                    div.one-news__head
-                        span="Медицина"
-                        span="29/01/2021"
-                    div.one-news__content 
+        main.main 
+            section.section.one_news 
+                h1.one_news__title="Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля"
+                ul.breadcrumbs 
+                    li="Главная"
+                    li="Новости"
+                    li="Медицина"
+                div.one_news__wrapper 
+                    div.one_news__head
+                        span.one_news__category="Медицина"
+                        span.one_news__date="29/01/2021"
+                    div.one_news__content 
                         h3="Ещё одна главная новость дня — с 8 февраля златоустовский роддом возвращается к привычному формату работы. Госпитальную базу для лечения больных коронавирусной инфекцией переводят в профильный режим. Приказ Министерство здравоохранения Челябинской области выпустило 27 января."
                         p="Напомним, перепрофилировать родильный дом решили в связи с ежедневным большим приростом златоустовцев, заболевших ковид-19.  За это время лечение на госпитальной базе прошли свыше 1000 пациентов."
                         img(src="images/one-news-photo.jpg", alt="Видео новости") 
@@ -29,42 +28,42 @@ html(lang='ru-RU')
                         p="«На сегодняшний день в МПЦ находятся 46 больных. Большая часть из них будет переведена на базу квартала Медик и меньшая часть – на базу долечивания, в район метзавода. В воскресенье к нам приезжает дезостанция для обработки всех помещений. С 1 по 7 число проводится заключительная дезинфекция всего родильного дома. С 8 числа мы начинаем принимать беременных и рожениц нашего города и горнозаводской зоны»."
                         hr
                         p="Подготовка к возвращению профильной деятельности больниц проводится тщательным образом. Это полная дезинфекция помещений, забор ряда лабораторных анализов. И только после разрешения всех инстанций медицинское учреждение поступает к работе. Златоуст — не единственный город, где в связи со стабилизацией обстановки с коронавирусной инфекцией медицинские объекты возвращаются к плановому приёму пациентов. Решение по сокращению коечных мест для больных ковидом принимается оперативным штабом по борьбе с коронавирусной инфекцией при Правительстве Челябинской области. Оставшиеся ковид-базы перейдут в прежний режим работы при условии улучшения ситуации."
-                    div.one-news__info 
-                        div.one-news__author  
-                            span="Автор материала"
+                    div.one_news__info 
+                        div.one_news__colomn  
+                            span.one_news__caption="Автор материала"
                             hr
-                            h3="Иван Анатольев"
-                        div.one-news__tags  
-                            span="Теги"
+                            h3.one_news__author="Иван Анатольев"
+                        div.one_news__colomn  
+                            span.one_news__caption="Теги"
                             hr
-                            ul 
+                            ul.one_news__tags 
                                 li="Роддом"
                                 li="Вакцинация" 
                                 li="Коронавирус" 
-                        div.one-news__socials  
-                            span="Поделиться" 
+                        div.one_news__colomn  
+                            span.one_news__caption="Поделиться" 
                             hr
-                            div 
-                                a(href="#")
+                            div.one_news__socials 
+                                a.one_news__link(href="#")
                                     img(src="images/youtube.svg", alt="YouTube") 
-                                a(href="#")
+                                a.one_news__link(href="#")
                                     img(src="images/facebook.svg", alt="Facebook") 
-                                a(href="#")
+                                a.one_news__link(href="#")
                                     img(src="images/vk.svg", alt="Вконтакте") 
-                                a(href="#")
+                                a.one_news__link(href="#")
                                     img(src="images/однокласники.svg", alt="Одноклассники")
-                                a(href="#")
+                                a.one_news__link(href="#")
                                     img(src="images/instagram.svg", alt="Instagram")
-            section.comment 
+            section.section.comment 
                 div.comment__wrapper
-                    h2="Оставьте свой комментарий" 
+                    h2.comment__title="Оставьте свой комментарий" 
                     div.comment__form 
-                        input#name(type="text" placeholder="Имя")
-                        input#email(type="email" placeholder="Email")
-                        label(for="file")
+                        input.comment__author#name(type="text" placeholder="Имя")
+                        input.comment__email#email(type="email" placeholder="Email")
+                        label.comment__label(for="file")
                             img(src="images/paper-clip.svg", alt="")
                             ="Прикрепить фото"
-                            input#file(type="file", name="Прикрепить фото") 
-                        input#comment(type="text" placeholder="Комментарий")
-                button="Отправить"
+                            input.comment__file#file(type="file", name="Прикрепить фото") 
+                        input.comment__text#comment(type="text" placeholder="Комментарий")
+                button.comment__send="Отправить"
         include includes/footer.pug

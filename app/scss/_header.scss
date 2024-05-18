@@ -1,0 +1,116 @@
+// Стили щапки сайта
+
+.header {
+    width: 100%;
+    max-width: $screen-lg;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 60px;
+    padding: 50px 200px 0;
+}
+
+.header__top {
+    @extend %header__side;
+} 
+
+.header__bottom {
+    @extend %header__side;
+    padding-bottom: 24px;
+    border-bottom: 4px solid #373334;
+}
+
+.header__contact {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+}
+
+.header__number {
+    @extend %font_title_md;
+    color: $primary-color;
+    text-decoration: none;
+}
+
+.header__search {
+    cursor: pointer;
+}
+
+.header__button {
+    width: 224px;
+    height: 50px;
+    @include original__button($color: $action-color, $background: $body-background);
+    @extend %font_title_sm;
+}
+.header__logo {
+    width: auto;
+    height: auto;
+}
+
+.header__burger-menu {
+    display: none;
+}
+
+.header__megaphone {
+    display: none;
+}
+
+.header__menu {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header__navigation {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 48px;
+}
+
+.header__link {
+    @extend %font_title_md;
+    color: $primary-color;
+    text-decoration: none;
+    @include underline();
+}
+
+.header__socials {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 48px;
+}
+
+.header__subscribe {
+    @extend %font_title_md;
+    color: $primary-color;
+    text-decoration: none;
+}
+
+.header__icons {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    
+}
+
+.header__icon {
+    cursor: pointer;
+}

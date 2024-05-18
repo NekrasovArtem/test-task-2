@@ -1,0 +1,251 @@
+@use "variables";
+
+// Страница одной новости 
+
+.one_news {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 135px;
+}
+
+.one_news__title {
+    @extend %font_title_lg;
+    color: $primary-color;
+    margin: 50px 0 15px;
+}
+
+.one_news__wrapper {
+    width: 100%;
+    max-width: 980px;
+    margin-top: 75px;
+}
+
+.one_news__head {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    padding: 10px 0;
+    border-bottom: 2px solid $primary-color;
+}
+
+.one_news__category {
+    @extend %font_title_sm;
+    line-height: 21.6px;
+    color: $action-color;
+}
+
+.one_news__date {
+    @extend %font_title_xxs;
+    color: $gray-color;
+    letter-spacing: 1px;
+}
+
+.one_news__content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 40px 0 20px;
+    img {
+        cursor: pointer;
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+    h3 {
+        @extend %font_title_md;
+        color: $primary-color;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    h4 {
+        margin: 0;
+        font-family: $font-family;
+    }
+    p {
+        @extend %font_title_sm;
+        font-weight: 300;
+        line-height: 26px;
+        color: $primary-color;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+    span {
+        @extend %font_title_xs;
+        line-height: 19px;
+        color: $gray-color;
+        margin-bottom: 25px;
+    }
+    hr {
+        width: 100%;
+        height: 2px;
+        border: none;
+        background: $primary-color;
+        margin-bottom: 50px;
+    }
+}
+
+.one_news__info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.one_news__colomn {
+    flex-basis: 340px;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    hr {
+        width: 100%;
+        height: 2px;
+        border: none;
+        background: $primary-color;
+        margin: 0;
+    }
+    &:nth-child(3) {
+        flex-basis: 208px;
+    }
+}
+
+.one_news__caption {
+    @extend %font_title_sm;
+    font-weight: 300;
+    line-height: 21.6px;
+    color: $primary-color;
+}
+
+.one_news__author {
+    @extend %font_title_md;
+    color: $primary-color;
+    margin: 0;
+}
+
+.one_news__tags {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+        @extend %font_title_sm;
+        line-height: 21.6px;
+        color: $primary-color;
+        padding-right: 5px;
+    }
+    li+li::before {
+        content: '/\00a0';
+    }
+}
+
+.one_news__socials {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.one_news__link {
+    width: auto;
+    height: auto;
+    font-family: $font-family;
+}
+
+.comment {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 90px 200px 110px;
+    background: $primary-color;
+}
+
+.comment__send {
+    width: 165px;
+    height: 50px;
+    @extend %font_title_sm;
+    @include original__button($color: #FFF, $background: $primary-color)
+}
+
+.comment__wrapper {
+    width: 100%;
+    max-width: 980px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.comment__title {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 65px;
+    font-family: $font-family;
+    color: #FFF;
+    margin: 0;
+}
+
+.comment__form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.comment__author {
+    @extend %comment__input;
+    flex-basis: 340px;
+}
+
+.comment__email {
+    @extend %comment__input;
+    flex-basis: 340px;
+}
+
+.comment__label {
+    cursor: pointer;
+    flex-basis: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend %font_title_xs;
+    font-weight: 300;
+    line-height: 19px;
+    color: #FFF;
+    gap: 10px;
+}
+
+.comment__file {
+    @extend %comment__input;
+    display: none;
+}
+
+.comment__text {
+    @extend %comment__input;
+    flex-basis: 100%;
+}

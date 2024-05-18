@@ -1,4 +1,7 @@
+include includes/mixins.pug
+
 - 
+    const mainPage = true;
     const latestNews = [
         {
             image: 'images/news-1.jpg', 
@@ -60,94 +63,73 @@
         },
     ]
 
+doctype html
 html(lang="ru-RU")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="css/style.min.css")
-        title="ЗТВ - Златоустовское телевидение"
+    +head()
     body 
         include includes/header.pug
-        main 
-            section.article 
+        main.main 
+            section.section.article 
                 div.article__wrapper 
-                    button="Читать" 
-                    img(src="images/news-photo.png", alt="Фото")
+                    button.article__button_mobile="Читать" 
+                    img.article__image(src="images/news-photo.png", alt="Фото")
                     div.article__content 
-                        div 
-                            span="Общество"
-                            p="Гонка сильнейших. На стадионе имени Светланы Ишмуратовой стартовал Чемпионат по биатлону"
-                        button="Читать"
-                    div.article__slider 
-                        div.slider__wrapper 
-                            img(src="images/slide-1.jpg", alt="Фото слайда")
-                            div.slider__slide-info 
-                                span="Нацпроект" 
-                                p="Безопасные и качественные автомобильные дороги" 
-                            div.slider__pagination 
-                                span.active-page 
-                                    span
-                                span 
-                                span 
-                                span 
-                                span 
-                            div.slider__navigation 
-                                button 
-                                    img(src="images/prev-page-arrow.svg", alt="")
-                                button 
-                                    img(src="images/next-page-arrow.svg", alt="")
-            section.latest-news 
-                div.latest-news__wrapper 
-                    div.latest-news__head 
-                        h2="Свежие новости"
-                        a(href="./news.html")
-                            button="Все новости" 
-                    div.latest-news__content 
-                        each item in latestNews
-                            div.latest-news__content-item 
-                                img(src=`${item.image}`, alt="Фото новости")
-                                div
-                                    span.content-item-category #{item.category}
-                                    span.content-item-date #{item.date}
-                                p #{item.name}
-                                a 
-                                    img(src="images/top-right-arrow.svg", alt="Подробнее")
-                    div.latest-news__banner 
+                        span.article__category="Общество"
+                        p.article__title="Гонка сильнейших. На стадионе имени Светланы Ишмуратовой стартовал Чемпионат по биатлону"
+                        button.article__button="Читать"
+                    div.swiper.article__slider 
+                        div.swiper__wrapper 
+                            div.swiper__slide
+                                img.slide__img(src="images/slide-1.jpg", alt="Фото слайда")
+                                div.slide__info 
+                                    span.slide__category="Нацпроект" 
+                                    p.slide__title="Безопасные и качественные автомобильные дороги" 
+                        div.slider__pagination 
+                            span.active-page 
+                                span
+                            span 
+                            span 
+                            span 
+                            span 
+                        div.slider__navigation 
+                            button 
+                                img(src="images/prev-page-arrow.svg", alt="")
+                            button 
+                                img(src="images/next-page-arrow.svg", alt="")
+            section.section.hot_news 
+                div.hot_news__wrapper 
+                    div.hot_news__head 
+                        h2.section__title="Свежие новости"
+                        a.section__link(href="./news.html")="Все новости" 
+                    +createHotNews(latestNews)
+                    div.hot_news__banner 
                         img(src="images/banner.svg", alt="ЗТВ - Златоустовское телевидение")
-            section.news 
+            section.section.news 
                 div.news__wrapper 
                     div.news__head 
-                        h2="Вектор развития"
-                        div 
-                            button 
+                        h2.section__title="Вектор развития"
+                        div.news__navigation 
+                            button.news__prev 
                                 img(src="images/prev-arrow.svg", alt="Предыдущая новость")
-                            button 
+                            button.news__next 
                                 img(src="images/next-arrow.svg", alt="Следующая новость")
-                    div.news__content 
-                        each item in news 
-                            div.news__item 
-                                img(src=`${item.image}`, alt="Фото новости")
-                                span #{item.date}
-                                p #{item.name}
-                                a 
-                                    img(src="images/top-right-arrow.svg", alt="Подробнее")
-                    button="Больше новостей"
-            section.releases
+                    +createNews(news)
+                    button.section__link="Больше новостей"
+            section.section.releases
                 div.releases__wrapper 
-                    h2="Премьерные выпуски"
+                    h2.releases__title="Премьерные выпуски"
                     div.releases__content 
-                        img(src="images/release.jpg", alt="Премьерный выпуск")
+                        img.releases__img(src="images/release.jpg", alt="Премьерный выпуск")
                         div.releases__items 
-                            .releases__item.releases__item-active 
-                                span="02/01/2021"
-                                h3="«Территория закона» 26.01.2021"
-                                a 
-                                    img(src="images/top-right-arrow-white.svg", alt="")
+                            div.releases__item.releases__item-active 
+                                span.releases__date="02/01/2021"
+                                h3.releases__name="«Территория закона» 26.01.2021"
+                                a.releases__link 
                             div.releases__item 
-                                span="02/01/2021"
-                                h3="«Сделано в Златоусте» №1 (Никон)"
+                                span.releases__date="02/01/2021"
+                                h3.releases__name="«Сделано в Златоусте» №1 (Никон)"
                             div.releases__item 
-                                span="02/01/2021"
-                                h3="«Депутатский час» 22.01.2021"
-                    button="Все выпуски"
+                                span.releases__date="02/01/2021"
+                                h3.releases__name="«Депутатский час» 22.01.2021"
+                    a.releases__button="Все выпуски"
         include includes/footer.pug

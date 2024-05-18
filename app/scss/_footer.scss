@@ -1,0 +1,86 @@
+// Стили подвала сайта
+
+.footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-white {
+    background: #FFF;
+}
+
+.footer__wrapper {
+    width: 100%;
+    max-width: 1520px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer__top {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 60px 0 50px;
+    border-bottom: 2px solid $primary-color;
+}
+
+.footer__subscribe {
+    @extend %font_title_bg;
+}
+
+.footer__icons {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer__icon {
+    img {
+        cursor: pointer;
+    }
+}
+
+.footer__bottom {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.footer__left {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__copyright {
+    @extend %font_title_xs;
+    color: $primary-color;
+}
+
+.footer__policy {
+    @extend %font_title_xs;
+    color: $primary-color;
+    text-decoration: none;
+}
+
+.footer__developers {
+    width: 70px;
+    height: 20px;
+}

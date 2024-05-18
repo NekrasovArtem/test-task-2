@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля</title>
   </head>
   <body>
-    <header> 
-      <div class="header__wrapper">
-        <div class="header__top"> <img class="burger-menu" src="images/burger-menu.svg" alt="Меню">
-          <button>Предложить новость</button><a href="./"><img src="images/Logo.svg" alt="Логотип"></a>
-          <div> <a href="tel:83513651711">8 (3513) 65-17-11 </a><img src="images/search.svg" alt="Поиск"></div><img class="megaphone" src="images/megaphone.svg" alt="Поделиться">
+    <header class="header"> 
+      <div class="header__top"> <img class="header__burger-menu" src="images/burger-menu.svg" alt="Меню">
+        <button class="header__button">Предложить новость</button>
+        <div class="header__contact"> <a class="header__number" href="tel:83513651711">8 (3513) 65-17-11</a><img class="header__search" src="images/search.svg" alt="Поиск"></div><img class="header__megaphone" src="images/megaphone.svg" alt="Поделиться">
+      </div>
+      <div class="header__bottom"> 
+        <div class="header__menu">
+          <nav class="header__navigation"> <a class="header__link" href="">Новости</a><a class="header__link" href="">Телепроекты</a><a class="header__link" href="">Реклама</a><a class="header__link" href="">Онлайн</a><a class="header__link" href="">Программа передач</a><a class="header__link" href="">Еще</a></nav>
         </div>
-        <div class="header__bottom"> 
-          <div class="header__navigation"> 
-            <nav> <a href="">Новости</a><a href="">Телепроекты</a><a href="">Реклама</a><a href="">Онлайн</a><a href="">Программа передач</a><a href="">Еще</a></nav>
-          </div>
-          <div class="header__socials"> <span>Подписывайтесь на нас: </span>
-            <div class="header__socials-icons"> <img src="images/youtube.svg" alt="YouTube"><img src="images/facebook.svg" alt="Facebook"><img src="images/vk.svg" alt="Вконтакте"><img src="images/однокласники.svg" alt="Одноклассники"><img src="images/instagram.svg" alt="Instagram"></div>
-          </div>
+        <div class="header__socials"> <span class="header__subscribe">Подписывайтесь на нас: </span>
+          <div class="header__icons"> <img class="header_icon" src="images/youtube.svg" alt="YouTube"><img class="header_icon" src="images/facebook.svg" alt="Facebook"><img class="header_icon" src="images/vk.svg" alt="Вконтакте"><img class="header_icon" src="images/однокласники.svg" alt="Одноклассники"><img class="header_icon" src="images/instagram.svg" alt="Instagram"></div>
         </div>
       </div>
     </header>
-    <main> 
-      <section class="one-news"> 
-        <div class="one-news__title"> 
-          <h1>Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля</h1>
-          <ul> 
-            <li>Главная</li>
-            <li>Новости</li>
-            <li>Медицина</li>
-          </ul>
-        </div>
-        <div class="one-news__wrapper"> 
-          <div class="one-news__head"><span>Медицина</span><span>29/01/2021</span></div>
-          <div class="one-news__content"> 
+    <main class="main"> 
+      <section class="section one_news"> 
+        <h1 class="one_news__title">Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля</h1>
+        <ul class="breadcrumbs"> 
+          <li>Главная</li>
+          <li>Новости</li>
+          <li>Медицина</li>
+        </ul>
+        <div class="one_news__wrapper"> 
+          <div class="one_news__head"><span class="one_news__category">Медицина</span><span class="one_news__date">29/01/2021</span></div>
+          <div class="one_news__content"> 
             <h3>Ещё одна главная новость дня — с 8 февраля златоустовский роддом возвращается к привычному формату работы. Госпитальную базу для лечения больных коронавирусной инфекцией переводят в профильный режим. Приказ Министерство здравоохранения Челябинской области выпустило 27 января.</h3>
             <p>Напомним, перепрофилировать родильный дом решили в связи с ежедневным большим приростом златоустовцев, заболевших ковид-19.  За это время лечение на госпитальной базе прошли свыше 1000 пациентов.</p><img src="images/one-news-photo.jpg" alt="Видео новости">
             <h4>Александр Дорофеев</h4><span>главный врач родильного дома г. Златоуста:</span>
@@ -43,53 +39,51 @@
             <hr>
             <p>Подготовка к возвращению профильной деятельности больниц проводится тщательным образом. Это полная дезинфекция помещений, забор ряда лабораторных анализов. И только после разрешения всех инстанций медицинское учреждение поступает к работе. Златоуст — не единственный город, где в связи со стабилизацией обстановки с коронавирусной инфекцией медицинские объекты возвращаются к плановому приёму пациентов. Решение по сокращению коечных мест для больных ковидом принимается оперативным штабом по борьбе с коронавирусной инфекцией при Правительстве Челябинской области. Оставшиеся ковид-базы перейдут в прежний режим работы при условии улучшения ситуации.</p>
           </div>
-          <div class="one-news__info"> 
-            <div class="one-news__author"> <span>Автор материала</span>
+          <div class="one_news__info"> 
+            <div class="one_news__colomn"> <span class="one_news__caption">Автор материала</span>
               <hr>
-              <h3>Иван Анатольев</h3>
+              <h3 class="one_news__author">Иван Анатольев</h3>
             </div>
-            <div class="one-news__tags"> <span>Теги</span>
+            <div class="one_news__colomn"> <span class="one_news__caption">Теги</span>
               <hr>
-              <ul> 
+              <ul class="one_news__tags"> 
                 <li>Роддом</li>
                 <li>Вакцинация</li>
                 <li>Коронавирус</li>
               </ul>
             </div>
-            <div class="one-news__socials"> <span>Поделиться</span>
+            <div class="one_news__colomn"> <span class="one_news__caption">Поделиться</span>
               <hr>
-              <div> <a href="#"><img src="images/youtube.svg" alt="YouTube"></a><a href="#"><img src="images/facebook.svg" alt="Facebook"></a><a href="#"><img src="images/vk.svg" alt="Вконтакте"></a><a href="#"><img src="images/однокласники.svg" alt="Одноклассники"></a><a href="#"><img src="images/instagram.svg" alt="Instagram"></a></div>
+              <div class="one_news__socials"> <a class="one_news__link" href="#"><img src="images/youtube.svg" alt="YouTube"></a><a class="one_news__link" href="#"><img src="images/facebook.svg" alt="Facebook"></a><a class="one_news__link" href="#"><img src="images/vk.svg" alt="Вконтакте"></a><a class="one_news__link" href="#"><img src="images/однокласники.svg" alt="Одноклассники"></a><a class="one_news__link" href="#"><img src="images/instagram.svg" alt="Instagram"></a></div>
             </div>
           </div>
         </div>
       </section>
-      <section class="comment"> 
+      <section class="section comment"> 
         <div class="comment__wrapper">
-          <h2>Оставьте свой комментарий</h2>
+          <h2 class="comment__title">Оставьте свой комментарий</h2>
           <div class="comment__form"> 
-            <input id="name" type="text" placeholder="Имя">
-            <input id="email" type="email" placeholder="Email">
-            <label for="file"><img src="images/paper-clip.svg" alt="">Прикрепить фото
-              <input id="file" type="file" name="Прикрепить фото">
+            <input class="comment__author" id="name" type="text" placeholder="Имя">
+            <input class="comment__email" id="email" type="email" placeholder="Email">
+            <label class="comment__label" for="file"><img src="images/paper-clip.svg" alt="">Прикрепить фото
+              <input class="comment__file" id="file" type="file" name="Прикрепить фото">
             </label>
-            <input id="comment" type="text" placeholder="Комментарий">
+            <input class="comment__text" id="comment" type="text" placeholder="Комментарий">
           </div>
         </div>
-        <button>Отправить</button>
+        <button class="comment__send">Отправить</button>
       </section>
     </main>
-    <footer class="footer-white"> 
+    <footer class="footer footer-white"> 
       <div class="footer__wrapper">
-        <div class="footer__socials"> <span>Подписывайтесь на нас:</span>
-          <div class="footer__socials-icons"> <a href="#"><img src="images/youtube.svg" alt="YouTube"></a><a href="#"><img src="images/facebook.svg" alt="Facebook"></a><a href="#"><img src="images/vk.svg" alt="Вконтакте"></a><a href="#"><img src="images/однокласники.svg" alt="Одноклассники"></a><a href="#"><img src="images/instagram.svg" alt="Instagram"></a></div>
+        <div class="footer__top"> <span class="footer__subscribe">Подписывайтесь на нас:</span>
+          <div class="footer__icons"> <a class="footer__icon" href="#"><img src="images/youtube.svg" alt="YouTube"></a><a class="footer__icon" href="#"><img src="images/facebook.svg" alt="Facebook"></a><a class="footer__icon" href="#"><img src="images/vk.svg" alt="Вконтакте"></a><a class="footer__icon" href="#"><img src="images/однокласники.svg" alt="Одноклассники"></a><a class="footer__icon" href="#"><img src="images/instagram.svg" alt="Instagram"></a></div>
         </div>
-        <div class="footer__copyright"> 
-          <div class="footer__copyright-left"> <span>© 2021 «Златоустовское телевидение»</span><a href="">Политика конфиденциальности</a></div><img src="images/xpage-logo.svg" alt="Логотип xpage">
+        <div class="footer__bottom"> 
+          <div class="footer__left"><span class="footer__copyright">© 2021 «Златоустовское телевидение»</span><a class="footer__policy" href="">Политика конфиденциальности</a></div><img class="footer__developers" src="images/xpage-logo.svg" alt="Логотип xpage">
         </div>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/datepicker.min.js"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/locales/ru.js"> </script>
-    <script src="js/main.min.js"> </script>
+    <script src="./js/main.min.js"> </script>
   </body>
 </html>

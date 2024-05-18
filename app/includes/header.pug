@@ -1,28 +1,28 @@
-header 
-    div.header__wrapper
-        div.header__top 
-            img.burger-menu(src="images/burger-menu.svg" alt="Меню")
-            button="Предложить новость"
-            a(href="./")
+header.header 
+    div.header__top 
+        img.header__burger-menu(src="images/burger-menu.svg" alt="Меню")
+        button.header__button="Предложить новость"
+        if mainPage 
+            a.header__logo(href="/")
                 img(src="images/Logo.svg", alt="Логотип") 
-            div 
-                a(href="tel:83513651711")="8 (3513) 65-17-11 "
-                img(src="images/search.svg", alt="Поиск") 
-            img.megaphone(src="images/megaphone.svg" alt="Поделиться")
-        div.header__bottom 
-            div.header__navigation 
-                nav 
-                    a(href="")="Новости"
-                    a(href="")="Телепроекты"
-                    a(href="")="Реклама"
-                    a(href="")="Онлайн"
-                    a(href="")="Программа передач"
-                    a(href="")="Еще"
-            div.header__socials 
-                span="Подписывайтесь на нас: "
-                div.header__socials-icons 
-                    img(src="images/youtube.svg", alt="YouTube") 
-                    img(src="images/facebook.svg", alt="Facebook") 
-                    img(src="images/vk.svg", alt="Вконтакте") 
-                    img(src="images/однокласники.svg", alt="Одноклассники") 
-                    img(src="images/instagram.svg", alt="Instagram")
+        div.header__contact 
+            a.header__number(href="tel:83513651711")="8 (3513) 65-17-11"
+            img.header__search(src="images/search.svg", alt="Поиск") 
+        img.header__megaphone(src="images/megaphone.svg" alt="Поделиться")
+    div.header__bottom 
+        div.header__menu
+            nav.header__navigation 
+                a.header__link(href="")="Новости"
+                a.header__link(href="")="Телепроекты"
+                a.header__link(href="")="Реклама"
+                a.header__link(href="")="Онлайн"
+                a.header__link(href="")="Программа передач"
+                a.header__link(href="")="Еще"
+        div.header__socials 
+            span.header__subscribe="Подписывайтесь на нас: "
+            div.header__icons 
+                img.header_icon(src="images/youtube.svg", alt="YouTube") 
+                img.header_icon(src="images/facebook.svg", alt="Facebook") 
+                img.header_icon(src="images/vk.svg", alt="Вконтакте") 
+                img.header_icon(src="images/однокласники.svg", alt="Одноклассники") 
+                img.header_icon(src="images/instagram.svg", alt="Instagram")

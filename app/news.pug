@@ -1,3 +1,5 @@
+include includes/mixins.pug
+
 -
     const whiteFooter = true;
     const news = [
@@ -39,61 +41,50 @@
         },
     ];
 
+doctype html
 html(lang='ru-RU')
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="css/style.min.css")
-        title="Все новости - ЗТВ"
+    +head("Все новости - ЗТВ")
     body
         include includes/header.pug
-        main 
-            section.all-news 
-                div.all-news__head 
-                    h1="Все новости"
-                    ul 
+        main.main 
+            section.section.all_news 
+                div.all_news__head 
+                    h1.all_news__title="Все новости"
+                    ul.breadcrumbs 
                         li="Главная"
                         li="Новости"
-                div.all-news__settings 
-                    input.all-news-category(type="text", name="date-picker" readonly placeholder="Выберите дату")
-                    select.all-news-category#news-category(name="news-category" aria-placeholder="Выбрать рубрику") 
-                        option(selected hidden value="Выберите рубрику")="Выберите рубрику"
-                        option(value="Медицины")="Медицины"
-                        option(value="Общество")="Общество" 
-                        option(value="Коммуналка")="Коммуналка" 
-                        option(value="Политика")="Политика" 
-                        option(value="Спорт")="Спорт" 
-                        option(value="Вектор развития")="Вектор развития" 
-                div.all-news__wrapper 
-                    each item in news
-                        div.latest-news__content-item 
-                            img(src=`${item.image}`, alt="Фото новости")
-                            div
-                                span.content-item-category #{item.category}
-                                span.content-item-date #{item.date}
-                            p #{item.name}
-                            a 
-                                img(src="images/top-right-arrow.svg", alt="Подробнее")
-                div.all-news__detailed 
+                div.all_news__settings 
+                    div.all_news__date 
+                        input.date__pick(type="text", name="date-picker" readonly placeholder="Выберите дату")
+                    div.all_news__category
+                        select.news-category(name="news-category" aria-placeholder="Выбрать рубрику") 
+                            option(selected hidden value="Выберите рубрику")="Выберите рубрику"
+                            option(value="Медицины")="Медицины"
+                            option(value="Общество")="Общество" 
+                            option(value="Коммуналка")="Коммуналка" 
+                            option(value="Политика")="Политика" 
+                            option(value="Спорт")="Спорт" 
+                            option(value="Вектор развития")="Вектор развития" 
+                +createHotNews(news)
+                div.detailed 
                     div.detailed__wrapper 
                         img.detailed__image(src="images/all-news-2.jpg", alt="Фото новости")
                         div.detailed__content 
-                            div.detailed__content-head 
-                                div 
-                                    span.detailed__content-category="Медицина" 
-                                    span.detailed__content-date="29/01/2021" 
-                                p="Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля"
-                            p="Ещё одна главная новость дня — с 8 февраля златоустовский роддом возвращается к привычному формату работы. Госпитальную базу для лечения больных коронавирусной инфекцией переводят..."
+                            div.detailed__head 
+                                div.detailed__meta 
+                                    span.detailed__category="Медицина" 
+                                    span.detailed__date="29/01/2021" 
+                                a.detailed__title(href="./news_one.html")="Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля"
+                            p.detailed__text="Ещё одна главная новость дня — с 8 февраля златоустовский роддом возвращается к привычному формату работы. Госпитальную базу для лечения больных коронавирусной инфекцией переводят..."
                         a.detailed__more(href="news_one.html") 
-                            img(src="images/top-right-arrow.svg", alt="Подробнее")
-                div.all-news__pagination 
+                div.all_news__pagination 
                     img.pagination__prev(src="images/prev-page-arrow.svg", alt="Предудыщая страница")
                     div.pagination__items 
-                        span.pagination__item-active="1"
-                        span="2"
-                        span="3"
-                        span="4"
-                        span="..."
-                        span="123"
+                        a.pagination__item.pagination__item-active(href="?page=1")="1"
+                        a.pagination__item(href="?page=2")="2"
+                        a.pagination__item(href="?page=3")="3"
+                        a.pagination__item(href="?page=4")="4"
+                        a.pagination__item(href="")="..."
+                        a.pagination__item(href="?page=123")="123"
                     img.pagination__next(src="images/next-page-arrow.svg", alt="Следующая страница")
         include includes/footer.pug

@@ -7,97 +7,90 @@
     <title>Все новости - ЗТВ</title>
   </head>
   <body>
-    <header> 
-      <div class="header__wrapper">
-        <div class="header__top"> <img class="burger-menu" src="images/burger-menu.svg" alt="Меню">
-          <button>Предложить новость</button><a href="./"><img src="images/Logo.svg" alt="Логотип"></a>
-          <div> <a href="tel:83513651711">8 (3513) 65-17-11 </a><img src="images/search.svg" alt="Поиск"></div><img class="megaphone" src="images/megaphone.svg" alt="Поделиться">
+    <header class="header"> 
+      <div class="header__top"> <img class="header__burger-menu" src="images/burger-menu.svg" alt="Меню">
+        <button class="header__button">Предложить новость</button>
+        <div class="header__contact"> <a class="header__number" href="tel:83513651711">8 (3513) 65-17-11</a><img class="header__search" src="images/search.svg" alt="Поиск"></div><img class="header__megaphone" src="images/megaphone.svg" alt="Поделиться">
+      </div>
+      <div class="header__bottom"> 
+        <div class="header__menu">
+          <nav class="header__navigation"> <a class="header__link" href="">Новости</a><a class="header__link" href="">Телепроекты</a><a class="header__link" href="">Реклама</a><a class="header__link" href="">Онлайн</a><a class="header__link" href="">Программа передач</a><a class="header__link" href="">Еще</a></nav>
         </div>
-        <div class="header__bottom"> 
-          <div class="header__navigation"> 
-            <nav> <a href="">Новости</a><a href="">Телепроекты</a><a href="">Реклама</a><a href="">Онлайн</a><a href="">Программа передач</a><a href="">Еще</a></nav>
-          </div>
-          <div class="header__socials"> <span>Подписывайтесь на нас: </span>
-            <div class="header__socials-icons"> <img src="images/youtube.svg" alt="YouTube"><img src="images/facebook.svg" alt="Facebook"><img src="images/vk.svg" alt="Вконтакте"><img src="images/однокласники.svg" alt="Одноклассники"><img src="images/instagram.svg" alt="Instagram"></div>
-          </div>
+        <div class="header__socials"> <span class="header__subscribe">Подписывайтесь на нас: </span>
+          <div class="header__icons"> <img class="header_icon" src="images/youtube.svg" alt="YouTube"><img class="header_icon" src="images/facebook.svg" alt="Facebook"><img class="header_icon" src="images/vk.svg" alt="Вконтакте"><img class="header_icon" src="images/однокласники.svg" alt="Одноклассники"><img class="header_icon" src="images/instagram.svg" alt="Instagram"></div>
         </div>
       </div>
     </header>
-    <main> 
-      <section class="all-news"> 
-        <div class="all-news__head"> 
-          <h1>Все новости</h1>
-          <ul> 
+    <main class="main"> 
+      <section class="section all_news"> 
+        <div class="all_news__head"> 
+          <h1 class="all_news__title">Все новости</h1>
+          <ul class="breadcrumbs"> 
             <li>Главная</li>
             <li>Новости</li>
           </ul>
         </div>
-        <div class="all-news__settings"> 
-          <input class="all-news-category" type="text" name="date-picker" readonly placeholder="Выберите дату">
-          <select class="all-news-category" id="news-category" name="news-category" aria-placeholder="Выбрать рубрику"> 
-            <option selected hidden value="Выберите рубрику">Выберите рубрику</option>
-            <option value="Медицины">Медицины</option>
-            <option value="Общество">Общество</option>
-            <option value="Коммуналка">Коммуналка</option>
-            <option value="Политика">Политика</option>
-            <option value="Спорт">Спорт</option>
-            <option value="Вектор развития">Вектор развития</option>
-          </select>
-        </div>
-        <div class="all-news__wrapper"> 
-          <div class="latest-news__content-item"> <img src="images/all-news-1.jpg" alt="Фото новости">
-            <div><span class="content-item-category">Медицина Общество</span><span class="content-item-date">02/01/2021</span></div>
-            <p>Благодаря поддержке предпринимателей. Златоустовские поликлиники оснастили холодильными установками для хранения вакцины</p><a> <img src="images/top-right-arrow.svg" alt="Подробнее"></a>
+        <div class="all_news__settings"> 
+          <div class="all_news__date"> 
+            <input class="date__pick" type="text" name="date-picker" readonly placeholder="Выберите дату">
           </div>
-          <div class="latest-news__content-item"> <img src="images/all-news-2.jpg" alt="Фото новости">
-            <div><span class="content-item-category">Медицина</span><span class="content-item-date">29/01/2021</span></div>
-            <p>Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля</p><a> <img src="images/top-right-arrow.svg" alt="Подробнее"></a>
-          </div>
-          <div class="latest-news__content-item"> <img src="images/all-news-3.jpg" alt="Фото новости">
-            <div><span class="content-item-category">Коммуналка</span><span class="content-item-date">29/01/2021</span></div>
-            <p>Осторожно, сосульки! Оттепель на этой неделе привела к тому, что на крышах многих домов образовались опасные ледяные наросты</p><a> <img src="images/top-right-arrow.svg" alt="Подробнее"></a>
-          </div>
-          <div class="latest-news__content-item"> <img src="images/all-news-4.jpg" alt="Фото новости">
-            <div><span class="content-item-category">Политика</span><span class="content-item-date">29/01/2021</span></div>
-            <p>В четыре раза меньше вопросов, чем обычно. В Златоусте прошло первое в 2021-м году Собрание депутатов</p><a> <img src="images/top-right-arrow.svg" alt="Подробнее"></a>
-          </div>
-          <div class="latest-news__content-item"> <img src="images/all-news-5.jpg" alt="Фото новости">
-            <div><span class="content-item-category">Коммуналка</span><span class="content-item-date">29/01/2021</span></div>
-            <p>В Златоусте сотрудники теротдела проверят магазин, из которого выбрасывали строительный мусор на контейнерную площадку</p><a> <img src="images/top-right-arrow.svg" alt="Подробнее"></a>
-          </div>
-          <div class="latest-news__content-item"> <img src="images/all-news-6.jpg" alt="Фото новости">
-            <div><span class="content-item-category">Общество</span><span class="content-item-date">29/01/2021</span></div>
-            <p>ДЧ: Первое Собрание депутатов 2021 года: планируется работа на весь год</p><a> <img src="images/top-right-arrow.svg" alt="Подробнее"></a>
+          <div class="all_news__category">
+            <select class="news-category" name="news-category" aria-placeholder="Выбрать рубрику"> 
+              <option selected hidden value="Выберите рубрику">Выберите рубрику</option>
+              <option value="Медицины">Медицины</option>
+              <option value="Общество">Общество</option>
+              <option value="Коммуналка">Коммуналка</option>
+              <option value="Политика">Политика</option>
+              <option value="Спорт">Спорт</option>
+              <option value="Вектор развития">Вектор развития</option>
+            </select>
           </div>
         </div>
-        <div class="all-news__detailed"> 
+        <div class="hot_news__content"> 
+          <div class="hot_news__item"> <img class="hot_news__img" src="images/all-news-1.jpg" alt="Фото новости">
+            <div class="hot_news__meta"><span class="hot_news__category">Медицина Общество</span><span class="hot_news__date">02/01/2021</span></div><a class="hot_news__text" href="./news_one.html">Благодаря поддержке предпринимателей. Златоустовские поликлиники оснастили холодильными установками для хранения вакцины</a><a class="hot_news__link" href="./news_one.html"> </a>
+          </div>
+          <div class="hot_news__item"> <img class="hot_news__img" src="images/all-news-2.jpg" alt="Фото новости">
+            <div class="hot_news__meta"><span class="hot_news__category">Медицина</span><span class="hot_news__date">29/01/2021</span></div><a class="hot_news__text" href="./news_one.html">Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля</a><a class="hot_news__link" href="./news_one.html"> </a>
+          </div>
+          <div class="hot_news__item"> <img class="hot_news__img" src="images/all-news-3.jpg" alt="Фото новости">
+            <div class="hot_news__meta"><span class="hot_news__category">Коммуналка</span><span class="hot_news__date">29/01/2021</span></div><a class="hot_news__text" href="./news_one.html">Осторожно, сосульки! Оттепель на этой неделе привела к тому, что на крышах многих домов образовались опасные ледяные наросты</a><a class="hot_news__link" href="./news_one.html"> </a>
+          </div>
+          <div class="hot_news__item"> <img class="hot_news__img" src="images/all-news-4.jpg" alt="Фото новости">
+            <div class="hot_news__meta"><span class="hot_news__category">Политика</span><span class="hot_news__date">29/01/2021</span></div><a class="hot_news__text" href="./news_one.html">В четыре раза меньше вопросов, чем обычно. В Златоусте прошло первое в 2021-м году Собрание депутатов</a><a class="hot_news__link" href="./news_one.html"> </a>
+          </div>
+          <div class="hot_news__item"> <img class="hot_news__img" src="images/all-news-5.jpg" alt="Фото новости">
+            <div class="hot_news__meta"><span class="hot_news__category">Коммуналка</span><span class="hot_news__date">29/01/2021</span></div><a class="hot_news__text" href="./news_one.html">В Златоусте сотрудники теротдела проверят магазин, из которого выбрасывали строительный мусор на контейнерную площадку</a><a class="hot_news__link" href="./news_one.html"> </a>
+          </div>
+          <div class="hot_news__item"> <img class="hot_news__img" src="images/all-news-6.jpg" alt="Фото новости">
+            <div class="hot_news__meta"><span class="hot_news__category">Общество</span><span class="hot_news__date">29/01/2021</span></div><a class="hot_news__text" href="./news_one.html">ДЧ: Первое Собрание депутатов 2021 года: планируется работа на весь год</a><a class="hot_news__link" href="./news_one.html"> </a>
+          </div>
+        </div>
+        <div class="detailed"> 
           <div class="detailed__wrapper"> <img class="detailed__image" src="images/all-news-2.jpg" alt="Фото новости">
             <div class="detailed__content"> 
-              <div class="detailed__content-head"> 
-                <div> <span class="detailed__content-category">Медицина</span><span class="detailed__content-date">29/01/2021</span></div>
-                <p>Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля</p>
+              <div class="detailed__head"> 
+                <div class="detailed__meta"> <span class="detailed__category">Медицина</span><span class="detailed__date">29/01/2021</span></div><a class="detailed__title" href="./news_one.html">Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля</a>
               </div>
-              <p>Ещё одна главная новость дня — с 8 февраля златоустовский роддом возвращается к привычному формату работы. Госпитальную базу для лечения больных коронавирусной инфекцией переводят...</p>
-            </div><a class="detailed__more" href="news_one.html"> <img src="images/top-right-arrow.svg" alt="Подробнее"></a>
+              <p class="detailed__text">Ещё одна главная новость дня — с 8 февраля златоустовский роддом возвращается к привычному формату работы. Госпитальную базу для лечения больных коронавирусной инфекцией переводят...</p>
+            </div><a class="detailed__more" href="news_one.html"> </a>
           </div>
         </div>
-        <div class="all-news__pagination"> <img class="pagination__prev" src="images/prev-page-arrow.svg" alt="Предудыщая страница">
-          <div class="pagination__items"> <span class="pagination__item-active">1</span><span>2</span><span>3</span><span>4</span><span>...</span><span>123</span></div><img class="pagination__next" src="images/next-page-arrow.svg" alt="Следующая страница">
+        <div class="all_news__pagination"> <img class="pagination__prev" src="images/prev-page-arrow.svg" alt="Предудыщая страница">
+          <div class="pagination__items"> <a class="pagination__item pagination__item-active" href="?page=1">1</a><a class="pagination__item" href="?page=2">2</a><a class="pagination__item" href="?page=3">3</a><a class="pagination__item" href="?page=4">4</a><a class="pagination__item" href="">...</a><a class="pagination__item" href="?page=123">123</a></div><img class="pagination__next" src="images/next-page-arrow.svg" alt="Следующая страница">
         </div>
       </section>
     </main>
-    <footer class="footer-white"> 
+    <footer class="footer footer-white"> 
       <div class="footer__wrapper">
-        <div class="footer__socials"> <span>Подписывайтесь на нас:</span>
-          <div class="footer__socials-icons"> <a href="#"><img src="images/youtube.svg" alt="YouTube"></a><a href="#"><img src="images/facebook.svg" alt="Facebook"></a><a href="#"><img src="images/vk.svg" alt="Вконтакте"></a><a href="#"><img src="images/однокласники.svg" alt="Одноклассники"></a><a href="#"><img src="images/instagram.svg" alt="Instagram"></a></div>
+        <div class="footer__top"> <span class="footer__subscribe">Подписывайтесь на нас:</span>
+          <div class="footer__icons"> <a class="footer__icon" href="#"><img src="images/youtube.svg" alt="YouTube"></a><a class="footer__icon" href="#"><img src="images/facebook.svg" alt="Facebook"></a><a class="footer__icon" href="#"><img src="images/vk.svg" alt="Вконтакте"></a><a class="footer__icon" href="#"><img src="images/однокласники.svg" alt="Одноклассники"></a><a class="footer__icon" href="#"><img src="images/instagram.svg" alt="Instagram"></a></div>
         </div>
-        <div class="footer__copyright"> 
-          <div class="footer__copyright-left"> <span>© 2021 «Златоустовское телевидение»</span><a href="">Политика конфиденциальности</a></div><img src="images/xpage-logo.svg" alt="Логотип xpage">
+        <div class="footer__bottom"> 
+          <div class="footer__left"><span class="footer__copyright">© 2021 «Златоустовское телевидение»</span><a class="footer__policy" href="">Политика конфиденциальности</a></div><img class="footer__developers" src="images/xpage-logo.svg" alt="Логотип xpage">
         </div>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/datepicker.min.js"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/locales/ru.js"> </script>
-    <script src="js/main.min.js"> </script>
+    <script src="./js/main.min.js"> </script>
   </body>
 </html>

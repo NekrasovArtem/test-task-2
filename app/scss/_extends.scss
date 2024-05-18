@@ -1,0 +1,131 @@
+@import "variables";
+
+%font_title_xxl {
+    font-size: 100px;
+    font-weight: 700;
+    font-family: $font-family;
+    line-height: 90px;
+}
+
+%font_title_xl {
+    font-size: 70px;
+    font-weight: 700;
+    font-family: $font-family;
+    line-height: 87.5px;
+}
+
+%font_title_lg {
+    font-size: 52px;
+    font-weight: 700;
+    font-family: $font-family;
+    line-height: 65px;
+}
+
+%font_title_bg {
+    font-size: 24px;
+    line-height: 27px;
+    font-family: $font-family;
+    font-weight: 500;
+}
+
+%font_title_md {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: $font-family;
+    font-weight: 500;
+}
+
+%font_title_sm {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: $font-family;
+    line-height: 16px;
+}
+
+%font_title_xs {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: $font-family;
+    line-height: 24px;
+}
+
+%font_title_xxs {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: $font-family;
+    line-height: 14px;
+}
+
+%header__side {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%news_item_category {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: $font-family;
+    line-height: 21.6px;
+    color: $primary-color;
+}
+
+%news__settings {
+    cursor: pointer;
+    position: relative;
+    width: 468px;
+    height: 60px;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+    border-radius: 0;
+    background: none;
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 100%;
+        background: url("../images/dropdown-arrow.svg") center no-repeat;
+        transition: all 0.5s ease-in-out;
+        z-index: -1;
+    }
+}
+
+%card__link {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url("../images/top-right-arrow.svg") center;
+    object-fit: cover;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        transform: rotateZ(45deg);
+    }
+}
+
+%comment__input {
+    height: 50px;
+    @extend %font_title_sm;
+    font-weight: 300;
+    line-height: 21.6px;
+    color: #FFF;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 2px solid #FFF;
+    background: none;
+    box-sizing: border-box;
+    &:focus {
+        outline: none;
+    }
+    &::placeholder {
+        @extend %font_title_sm;
+        font-weight: 300;
+        line-height: 21.6px;
+        color: #FFF;
+    }
+}
