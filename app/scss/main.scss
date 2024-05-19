@@ -41,20 +41,36 @@ body {
 .section__title {
     max-width: 600px;
     height: auto;
-    font-size: 100px;
-    line-height: 90px;
-    color: $primary-color;
+    font-size: 40px;
+    line-height: 40px;
     font-weight: 700;
     font-family: $font-family;
+    color: $primary-color;
     margin: 0;
+    @include screen_lg {
+        font-size: 100px;
+        line-height: 90px;
+    }
 }
 
 .section__link {
     width: 165px;
     height: auto;
-    @include original__button($color: $primary-color, $background: $body-background);
-    @extend %font_title_sm;
     text-decoration: none;
+    display: none;
+    @extend %font_title_sm;
+    @include original__button($color: $primary-color, $background: $body-background);
+    @include screen_bg {
+        display: block;
+    }
+}
+
+.section__link_mobile {
+    width: 100%;
+    display: block;
+    @include screen_bg {
+        display: none;
+    }
 }
 
 .breadcrumbs {

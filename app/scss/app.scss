@@ -11,51 +11,12 @@
 @import "one-news.scss";
 
 @media screen and (max-width: 320px) {
-    .header {
-        padding: 16px 24px;
-        border-bottom: 2px solid $primary-color;
-    }
-
-    .header__wrapper {
-        padding: 0;
-        border: none;
-    }
-
-    .header__top {
-        justify-content: space-between;
-        button {
-            display: none;
-        }
-        a {
-            img {
-                width: 104px;
-                height: auto;
-            }
-        }
-        div {
-            display: none;
-        }
-    }
-
-    .burger-menu {
-        display: block;
-    }
-
-    .header__megaphone {
-        display: block;
-    }
-
-    .header__bottom {
-        display: none;
-    }
-
     .section {
         padding: 0 24px;
     }
 
     .article {
         padding: 34px 24px 52px;
-        border: none;
     }
 
     .article__slider {

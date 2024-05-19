@@ -54,3 +54,33 @@
     object-fit: cover;
     transition: all 0.3s ease-in-out;
 }
+
+@mixin screen_sm() {
+    @media (min-width: $screen-sm) {
+        @content;
+    }
+}
+
+@mixin screen_md() {
+    @media (min-width: $screen-md) {
+        @content;
+    }
+}
+
+@mixin screen_bg() {
+    @media (min-width: $screen-bg) {
+        @content;
+    }
+}
+
+@mixin screen_lg() {
+    @media (min-width: $screen-lg) {
+        @content;
+    }
+}
+
+@mixin screen_xl() {
+    @media (min-width: $screen-xl) {
+        @content;
+    }
+}

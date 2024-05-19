@@ -1,34 +1,52 @@
 // Стили щапки сайта
 
 .header {
+    box-sizing: border-box;
     width: 100%;
-    max-width: $screen-lg;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     gap: 60px;
-    padding: 50px 200px 0;
+    padding: 16px 20px 0;
+    @include screen_bg {
+        gap: 30px;
+        max-width: $screen-lg;
+        padding: 50px 200px 0;
+        border: none;
+    }
 }
 
 .header__top {
     @extend %header__side;
+    padding-bottom: 16px;
+    border-bottom: 4px solid #373334;
+    @include screen_bg {
+        border: none;
+    }
 } 
 
 .header__bottom {
-    @extend %header__side;
+    display: none;
     padding-bottom: 24px;
     border-bottom: 4px solid #373334;
+    @extend %header__side;
+    @include screen_bg {
+        display: flex;
+    }
 }
 
 .header__contact {
     width: auto;
     height: auto;
-    display: flex;
+    display: none;
     justify-content: flex-end;
     align-items: center;
     gap: 40px;
+    @include screen_bg {
+        display: flex;
+    }
 }
 
 .header__number {
@@ -42,22 +60,39 @@
 }
 
 .header__button {
+    display: none;
     width: 224px;
     height: 50px;
     @include original__button($color: $action-color, $background: $body-background);
     @extend %font_title_sm;
+    @include screen_bg {
+        display: block;
+    }
 }
 .header__logo {
     width: auto;
-    height: auto;
+    height: 24px;
+    @include screen_bg {
+        height: 48px;
+    }
+    img {
+        width: auto;
+        height: 100%;
+    }
 }
 
 .header__burger-menu {
-    display: none;
+    display: block;
+    @include screen_bg {
+        display: none;
+    }
 }
 
 .header__megaphone {
-    display: none;
+    display: block;
+    @include screen_bg {
+        display: none;
+    }
 }
 
 .header__menu {
@@ -76,6 +111,9 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 48px;
+    @include screen_bg {
+        gap: 16px
+    }
 }
 
 .header__link {
@@ -93,6 +131,9 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 48px;
+    @include screen_bg {
+        gap: 16px
+    }
 }
 
 .header__subscribe {
