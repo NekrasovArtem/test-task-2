@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.min.css" type="text/css">
     <title>ЗТВ - Златоустовское телевидение</title>
   </head>
   <body> 
@@ -24,24 +24,44 @@
     <main class="main"> 
       <section class="section article"> 
         <div class="article__wrapper"> 
-          <button class="article__button_mobile">Читать</button><img class="article__image" src="images/news-photo.png" alt="Фото">
+          <div class="article__button_mobile"> 
+            <button>Читать</button>
+          </div><img class="article__image" src="images/news-photo.png" alt="Фото">
           <div class="article__content"> <span class="article__category">Общество</span>
             <p class="article__title">Гонка сильнейших. На стадионе имени Светланы Ишмуратовой стартовал Чемпионат по биатлону</p>
             <button class="article__button">Читать</button>
           </div>
           <div class="swiper article__slider"> 
-            <div class="swiper__wrapper"> 
-              <div class="swiper__slide"><img class="slide__img" src="images/slide-1.jpg" alt="Фото слайда">
+            <div class="swiper-wrapper"> 
+              <div class="swiper-slide"><img class="slide__img" src="images/slide-1.jpg" alt="Фото слайда">
+                <div class="slide__info"> <span class="slide__category">Нацпроект</span>
+                  <p class="slide__title">Безопасные и качественные автомобильные дороги</p>
+                </div>
+              </div>
+              <div class="swiper-slide"><img class="slide__img" src="images/slide-1.jpg" alt="Фото слайда">
+                <div class="slide__info"> <span class="slide__category">Нацпроект</span>
+                  <p class="slide__title">Безопасные и качественные автомобильные дороги</p>
+                </div>
+              </div>
+              <div class="swiper-slide"><img class="slide__img" src="images/slide-1.jpg" alt="Фото слайда">
+                <div class="slide__info"> <span class="slide__category">Нацпроект</span>
+                  <p class="slide__title">Безопасные и качественные автомобильные дороги</p>
+                </div>
+              </div>
+              <div class="swiper-slide"><img class="slide__img" src="images/slide-1.jpg" alt="Фото слайда">
+                <div class="slide__info"> <span class="slide__category">Нацпроект</span>
+                  <p class="slide__title">Безопасные и качественные автомобильные дороги</p>
+                </div>
+              </div>
+              <div class="swiper-slide"><img class="slide__img" src="images/slide-1.jpg" alt="Фото слайда">
                 <div class="slide__info"> <span class="slide__category">Нацпроект</span>
                   <p class="slide__title">Безопасные и качественные автомобильные дороги</p>
                 </div>
               </div>
             </div>
-            <div class="slider__pagination"> <span class="active-page"> <span></span></span><span> </span><span> </span><span> </span><span> </span></div>
-            <div class="slider__navigation"> 
-              <button> <img src="images/prev-page-arrow.svg" alt=""></button>
-              <button> <img src="images/next-page-arrow.svg" alt=""></button>
-            </div>
+            <div class="article__pagination"> </div>
+            <button class="article__button_prev"> </button>
+            <button class="article__button_next"> </button>
           </div>
         </div>
       </section>
@@ -50,53 +70,47 @@
           <div class="hot_news__head"> 
             <h2 class="section__title">Свежие новости</h2><a class="section__link" href="./news.html">Все новости</a>
           </div>
-          <div class="hot_news__content"> 
-            <div class="hot_news__item"> <img class="hot_news__img" src="images/news-1.jpg" alt="Фото новости">
-              <div class="hot_news__meta"><span class="hot_news__category">Коммуналка</span><span class="hot_news__date">02/01/2021</span></div><a class="hot_news__text" href="./news_one.html">Домой по светлой улице. В Златоусте завершили монтаж сразу двух новых линий наружного освещения</a><a class="hot_news__link" href="./news_one.html"> </a>
-            </div>
-            <div class="hot_news__item"> <img class="hot_news__img" src="images/news-2.jpg" alt="Фото новости">
-              <div class="hot_news__meta"><span class="hot_news__category">Медицина</span><span class="hot_news__date">02/01/2021</span></div><a class="hot_news__text" href="./news_one.html">Ключи от медицинской помощи. «Городская больница» Златоуста получила новые спецавтомобили</a><a class="hot_news__link" href="./news_one.html"> </a>
-            </div>
-            <div class="hot_news__item"> <img class="hot_news__img" src="images/news-3.jpg" alt="Фото новости">
-              <div class="hot_news__meta"><span class="hot_news__category">Коммуналка</span><span class="hot_news__date">02/01/2021</span></div><a class="hot_news__text" href="./news_one.html">Домой по светлой улице. В Златоусте завершили монтаж сразу двух новых линий наружного освещения</a><a class="hot_news__link" href="./news_one.html"> </a>
-            </div>
-            <div class="hot_news__item"> <img class="hot_news__img" src="images/news-4.jpg" alt="Фото новости">
-              <div class="hot_news__meta"><span class="hot_news__category">Коммуналка</span><span class="hot_news__date">02/01/2021</span></div><a class="hot_news__text" href="./news_one.html">На перегоне между районом машзавода и проспект Гагарина ограничили максимальную скорость до 40 километров в час</a><a class="hot_news__link" href="./news_one.html"> </a>
-            </div>
-            <div class="hot_news__item"> <img class="hot_news__img" src="images/news-5.jpg" alt="Фото новости">
-              <div class="hot_news__meta"><span class="hot_news__category">Медицина</span><span class="hot_news__date">02/01/2021</span></div><a class="hot_news__text" href="./news_one.html">Теплоснабжение без перебоев. Такую задачу перед всеми ответственными службами  поставил глава округа Максим Пекарский</a><a class="hot_news__link" href="./news_one.html"> </a>
-            </div>
-            <div class="hot_news__item"> <img class="hot_news__img" src="images/news-6.jpg" alt="Фото новости">
-              <div class="hot_news__meta"><span class="hot_news__category">Коммуналка</span><span class="hot_news__date">02/01/2021</span></div><a class="hot_news__text" href="./news_one.html">На перегоне между районом машзавода и проспект Гагарина ограничили максимальную скорость до 40 километров в час</a><a class="hot_news__link" href="./news_one.html"> </a>
-            </div>
+          <div class="hot_news__content"> <a class="hot_news__item" href="./news_one.html"> <img class="hot_news__img" src="images/news-1.jpg" alt="Фото новости">
+              <div class="hot_news__meta"><span class="hot_news__category">Коммуналка</span><span class="hot_news__date">02/01/2021</span></div>
+              <p class="hot_news__text">Домой по светлой улице. В Златоусте завершили монтаж сразу двух новых линий наружного освещения</p><span class="hot_news__link"> </span></a><a class="hot_news__item" href="./news_one.html"> <img class="hot_news__img" src="images/news-2.jpg" alt="Фото новости">
+              <div class="hot_news__meta"><span class="hot_news__category">Медицина</span><span class="hot_news__date">02/01/2021</span></div>
+              <p class="hot_news__text">Ключи от медицинской помощи. «Городская больница» Златоуста получила новые спецавтомобили</p><span class="hot_news__link"> </span></a><a class="hot_news__item" href="./news_one.html"> <img class="hot_news__img" src="images/news-3.jpg" alt="Фото новости">
+              <div class="hot_news__meta"><span class="hot_news__category">Коммуналка</span><span class="hot_news__date">02/01/2021</span></div>
+              <p class="hot_news__text">Домой по светлой улице. В Златоусте завершили монтаж сразу двух новых линий наружного освещения</p><span class="hot_news__link"> </span></a><a class="hot_news__item" href="./news_one.html"> <img class="hot_news__img" src="images/news-4.jpg" alt="Фото новости">
+              <div class="hot_news__meta"><span class="hot_news__category">Коммуналка</span><span class="hot_news__date">02/01/2021</span></div>
+              <p class="hot_news__text">На перегоне между районом машзавода и проспект Гагарина ограничили максимальную скорость до 40 километров в час</p><span class="hot_news__link"> </span></a><a class="hot_news__item" href="./news_one.html"> <img class="hot_news__img" src="images/news-5.jpg" alt="Фото новости">
+              <div class="hot_news__meta"><span class="hot_news__category">Медицина</span><span class="hot_news__date">02/01/2021</span></div>
+              <p class="hot_news__text">Теплоснабжение без перебоев. Такую задачу перед всеми ответственными службами  поставил глава округа Максим Пекарский</p><span class="hot_news__link"> </span></a><a class="hot_news__item" href="./news_one.html"> <img class="hot_news__img" src="images/news-6.jpg" alt="Фото новости">
+              <div class="hot_news__meta"><span class="hot_news__category">Коммуналка</span><span class="hot_news__date">02/01/2021</span></div>
+              <p class="hot_news__text">На перегоне между районом машзавода и проспект Гагарина ограничили максимальную скорость до 40 километров в час</p><span class="hot_news__link"> </span></a>
           </div><a class="section__link section__link_mobile" href="./news.html">Все новости</a>
           <div class="hot_news__banner"> <img src="images/banner.svg" alt="ЗТВ - Златоустовское телевидение"></div>
         </div>
       </section>
       <section class="section news"> 
-        <div class="news__wrapper"> 
-          <div class="news__head"> 
-            <h2 class="section__title">Вектор развития</h2>
-            <div class="news__navigation"> 
-              <button class="news__prev"> <img src="images/prev-arrow.svg" alt="Предыдущая новость"></button>
-              <button class="news__next"> <img src="images/next-arrow.svg" alt="Следующая новость"></button>
-            </div>
+        <div class="news__head"> 
+          <h2 class="section__title">Вектор развития</h2>
+          <div class="news__navigation"> 
+            <button class="news__button_prev"> <img src="images/prev-arrow.svg" alt="Предыдущая новость"></button>
+            <button class="news__button_next"> <img src="images/next-arrow.svg" alt="Следующая новость"></button>
           </div>
-          <div class="news__content"> 
-            <div class="news__item"> <img class="news__img" src="images/news-7.jpg" alt="Фото новости"><span class="news__date">19/01/2021</span>
+        </div>
+        <div class="swiper news__content"> 
+          <div class="swiper-wrapper news__wrapper"> 
+            <div class="swiper-slide news__item"> <img class="news__img" src="images/news-7.jpg" alt="Фото новости"><span class="news__date">19/01/2021</span>
               <p class="news__title">Спортивный центр, доступный для всех жителей города и района метзавода. Бассейн «Сталь» теперь стал муниципальным</p><a class="hot_news__link" href="./news_one.html"> </a>
             </div>
-            <div class="news__item"> <img class="news__img" src="images/news-8.jpg" alt="Фото новости"><span class="news__date">15/01/2021</span>
+            <div class="swiper-slide news__item"> <img class="news__img" src="images/news-8.jpg" alt="Фото новости"><span class="news__date">15/01/2021</span>
               <p class="news__title">Условия для воспитания и образования в Златоусте – одно из приоритетных направлений</p><a class="hot_news__link" href="./news_one.html"> </a>
             </div>
-            <div class="news__item"> <img class="news__img" src="images/news-9.jpg" alt="Фото новости"><span class="news__date">24/12/2020</span>
+            <div class="swiper-slide news__item"> <img class="news__img" src="images/news-9.jpg" alt="Фото новости"><span class="news__date">24/12/2020</span>
               <p class="news__title">Реализовали давно задуманные планы. На златоустовском «Заводе «Стройтехника» открылся ещё один производственный корпус</p><a class="hot_news__link" href="./news_one.html"> </a>
             </div>
-            <div class="news__item"> <img class="news__img" src="images/news-7.jpg" alt="Фото новости"><span class="news__date">19/01/2021</span>
+            <div class="swiper-slide news__item"> <img class="news__img" src="images/news-7.jpg" alt="Фото новости"><span class="news__date">19/01/2021</span>
               <p class="news__title">Спортивный центр, доступный для всех жителей города и района метзавода. Бассейн «Сталь» теперь стал муниципальным</p><a class="hot_news__link" href="./news_one.html"> </a>
             </div>
           </div>
-          <button class="section__link">Больше новостей</button>
+          <button class="section__link_mobile">Больше новостей</button>
         </div>
       </section>
       <section class="section releases">
@@ -113,6 +127,8 @@
               <div class="releases__item"> <span class="releases__date">02/01/2021</span>
                 <h3 class="releases__name">«Депутатский час» 22.01.2021</h3>
               </div>
+              <button class="releases__button_prev"> <img src="./images/prev-arrow-white.svg" alt="Предыдущий выпуск"></button>
+              <button class="releases__button_next"> <img src="./images/next-arrow-white.svg" alt="Следующий выпуск"></button>
             </div>
           </div><a class="releases__button">Все выпуски</a>
         </div>

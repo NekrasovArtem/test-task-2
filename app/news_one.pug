@@ -66,4 +66,14 @@ html(lang='ru-RU')
                             input.comment__file#file(type="file", name="Прикрепить фото") 
                         input.comment__text#comment(type="text" placeholder="Комментарий")
                 button.comment__send="Отправить"
+                div.comment__pd 
+                    span.comment__pd_check="Нажимая на кнопку, я соглашаюсь на обработку моих персональных данных"
+                    //- label.comment__pd_check 
+                    //-     input(type="checkbox", name="")
+                    //-     ="Нажимая на кнопку, я соглашаюсь на обработку моих персональных данных" 
+                div.comments
+                    span.comments__count="3 комментария"
+                    div.comments__read 
+                        span.comments__read_all="Читать все" 
+                        img.comments__img(src="./images/down-arrow-white.svg", alt="")
         include includes/footer.pug

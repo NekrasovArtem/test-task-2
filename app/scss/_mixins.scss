@@ -41,13 +41,14 @@
 
 @mixin card__link($white: false) {
     cursor: pointer;
-    position: absolute;
+    margin-top: auto;
+    flex-shrink: 0;
     @if $white {
-        background: url("../images/top-right-arrow-white.svg") center;
+        background: url("../images/top-right-arrow-white.svg") center no-repeat;
         width: 27px;
         height: 27px;
     } @else {
-        background: url("../images/top-right-arrow.svg") center;
+        background: url("../images/top-right-arrow.svg") center no-repeat;
         width: 20px;
         height: 20px;
     }

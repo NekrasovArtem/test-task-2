@@ -5,6 +5,12 @@
 .all_news {
     width: 100%;
     height: auto;
+    @include screen-bg {
+        padding: 0 20px;
+    }
+    @include screen-lg {
+        padding: 0;
+    }
 }
 
 .all_news__head {
@@ -17,17 +23,28 @@
 }
 
 .all_news__title {
+    line-height: 52px;
+    margin: 55px 0 10px;
     @extend %font_title_xl;
-    margin: 55px 0 5px;
+    @include screen-md {
+        line-height: 87.5px;
+    }
 }
 
 .all_news__settings {
     width: 100%;
     height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 50px;
+    gap: 10px;
+    margin-bottom: 50px;
+    @include screen-bg {
+        flex-direction: row;
+        gap: 50px;
+        margin: 0;
+    } 
 }
 
 .datepicker {
@@ -177,8 +194,14 @@
 .detailed {
     width: 100%;
     height: auto;
-    padding: 50px;
+    padding: 10px;
     background: #FFF;
+    @include screen-bg {
+        padding: 20px;
+    }
+    @include screen-lg {
+        padding: 50px;
+    }
 }
 
 .detailed__wrapper {
@@ -186,28 +209,33 @@
     width: 100%;
     height: auto;
     display: flex;
-    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    @include screen-bg {
+        flex-direction: row;
+        gap: 50px;
+    }
 }
 
 .detailed__image {
-    width: 468px;
-    height: 264px;
+    width: 100%;
+    height: auto;
+    @include screen-lg {
+        max-width: 468px;
+    }
 }
 
 .detailed__content {
     width: 100%;
-    max-width: 600px;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-}
-
-.detailed__text {
-    @extend %font_title_sm;
-    font-weight: 300;
-    color: $primary-color;
+    @include screen-lg {
+        max-width: 600px;
+    }
 }
 
 .detailed__head {
@@ -215,7 +243,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 .detailed__meta {
@@ -239,17 +267,34 @@
 }
 
 .detailed__title {
-    @extend %font_title_md;
+    line-height: 20px;
     color: $primary-color;
     text-decoration: none;
-    padding: 20px 0;
+    padding: 0;
     transition: all 0.2s ease-in-out;
+    @extend %font_title_sm;
     &:hover {
         color: $action-color;
+    }
+    @include screen-bg {
+        font-size: 20px;
+        line-height: 27px;
+    }
+}
+
+.detailed__text {
+    line-height: 18px;
+    font-weight: 300;
+    color: $primary-color;
+    @extend %font_title_xs;
+    @include screen-bg {
+        font-size: 16px;
+        line-height: 26px;
     }
 }
 
 .detailed__more {
+    position: absolute;
     right: 0;
     bottom: 0;
     @include card__link();

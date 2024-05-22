@@ -9,19 +9,31 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-bottom: 135px;
+    margin-bottom: 60px;
+    @include screen-lg {
+        padding: 0 20px;
+    }
 }
 
 .one_news__title {
-    @extend %font_title_lg;
+    @extend %font_title_bg;
     color: $primary-color;
-    margin: 50px 0 15px;
+    margin: 30px 0 15px;
+    @include screen-lg {
+        font-size: 52px;
+        line-height: 65px;
+        font-weight: 700;
+        margin: 50px 0 15px;
+    }
 }
 
 .one_news__wrapper {
     width: 100%;
     max-width: 980px;
-    margin-top: 75px;
+    margin-top: 50px;
+    @include screen-bg {
+        margin-top: 75px;
+    }
 }
 
 .one_news__head {
@@ -54,7 +66,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 40px 0 20px;
+    padding: 20px 0;
     img {
         cursor: pointer;
         width: 100%;
@@ -62,26 +74,33 @@
         margin-bottom: 50px;
     }
     h3 {
-        @extend %font_title_md;
+        @extend %font_title_sm;
+        font-weight: 500;
+        line-height: 24px;
         color: $primary-color;
         margin: 0;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+        @include screen-bg {
+            margin-bottom: 30px;
+        }
     }
     h4 {
+        @extend %font_title_sm;
+        line-height: 21.6px;
         margin: 0;
-        font-family: $font-family;
+        margin-bottom: 8px
     }
     p {
         @extend %font_title_sm;
         font-weight: 300;
-        line-height: 26px;
+        line-height: 24px;
         color: $primary-color;
         margin: 0;
         margin-bottom: 50px;
     }
     span {
-        @extend %font_title_xs;
-        line-height: 19px;
+        @extend %font_title_xxs;
+        line-height: 16px;
         color: $gray-color;
         margin-bottom: 25px;
     }
@@ -92,24 +111,33 @@
         background: $primary-color;
         margin-bottom: 50px;
     }
+    @include screen-bg {
+        padding: 40px 0 20px;
+    }
 }
 
 .one_news__info {
     width: 100%;
     height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 50px;
+    gap: 40px;
+    padding-bottom: 50px;
+    border-bottom: 3px solid $primary-color;
+    @include screen-bg {
+        flex-direction: row;
+        gap: 50px;
+    }
 }
 
 .one_news__colomn {
-    flex-basis: 340px;
-    width: auto;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     hr {
         width: 100%;
         height: 2px;
@@ -117,8 +145,12 @@
         background: $primary-color;
         margin: 0;
     }
-    &:nth-child(3) {
-        flex-basis: 208px;
+    @include screen-bg {
+        flex-basis: 340px;
+        gap: 15px;
+        &:nth-child(3) {
+            flex-basis: 208px;
+        }
     }
 }
 
@@ -174,16 +206,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 80px;
-    padding: 90px 200px 110px;
+    padding: 50px 20px;
     background: $primary-color;
-}
-
-.comment__send {
-    width: 165px;
-    height: 50px;
-    @extend %font_title_sm;
-    @include original__button($color: #FFF, $background: $primary-color)
+    @include screen-xl {
+        padding: 90px 200px 110px;
+    }
 }
 
 .comment__wrapper {
@@ -195,15 +222,13 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 50px;
+    margin-bottom: 50px;
 }
 
 .comment__title {
-    font-size: 52px;
-    font-weight: 700;
-    line-height: 65px;
-    font-family: $font-family;
     color: #FFF;
     margin: 0;
+    @extend %font_title_mobile;
 }
 
 .comment__form {
@@ -213,17 +238,26 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 30px;
+    @include screen-bg {
+        gap: 50px;
+    }
 }
 
 .comment__author {
+    width: 100%;
     @extend %comment__input;
-    flex-basis: 340px;
+    @include screen-bg {
+        flex-basis: 340px;
+    }
 }
 
 .comment__email {
+    width: 100%;
     @extend %comment__input;
-    flex-basis: 340px;
+    @include screen-bg {
+        flex-basis: 340px;
+    }
 }
 
 .comment__label {
@@ -231,13 +265,20 @@
     flex-basis: 200px;
     height: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    @extend %font_title_xs;
+    gap: 10px;
+    order: 4;
     font-weight: 300;
     line-height: 19px;
     color: #FFF;
-    gap: 10px;
+    @extend %font_title_xs;
+    @include screen-bg {
+        justify-content: center;
+    }
+    @include screen-lg {
+        order: 0;
+    }
 }
 
 .comment__file {
@@ -248,4 +289,69 @@
 .comment__text {
     @extend %comment__input;
     flex-basis: 100%;
+}
+
+.comment__send {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    @extend %font_title_sm;
+    @include original__button($color: #FFF, $background: $primary-color);
+    @include screen-bg {
+        width: 165px;
+    }
+}
+
+.comment__pd {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+    @include screen-lg {
+        display: none;
+    }
+}
+
+.comment__pd_check {
+    display: block;
+    width: 100%;
+    height: auto;
+    color: #FFF;
+    text-align: center;
+    @extend %font_title_xs;
+}
+
+.comments {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include screen-lg {
+        display: none;
+    }
+}
+
+.comments__count {
+    @extend %font_title_xs;
+    color: #FFF;
+}
+
+.comments__read {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.comments__read_all {
+    @extend %font_title_sm;
+    font-weight: 500;
+    color: #FFF;
+}
+
+.comments__img {
+    width: 10px;
+    height: auto;
 }

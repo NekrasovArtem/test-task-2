@@ -2,25 +2,16 @@ mixin head(title = 'ЗТВ - Златоустовское телевидение
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="css/style.min.css")
+        link(rel="stylesheet", href="css/style.min.css" type="text/css")
         title=title
 
 mixin createHotNews(news = [])
     div.hot_news__content 
         each item in news
-            div.hot_news__item 
+            a.hot_news__item(href="./news_one.html") 
                 img.hot_news__img(src=`${item.image}`, alt="Фото новости")
                 div.hot_news__meta
                     span.hot_news__category #{item.category}
                     span.hot_news__date #{item.date}
-                a.hot_news__text(href="./news_one.html") #{item.name}
-                a.hot_news__link(href="./news_one.html") 
-
-mixin createNews(news = [])
-    div.news__content 
-        each item in news 
-            div.news__item 
-                img.news__img(src=`${item.image}`, alt="Фото новости")
-                span.news__date #{item.date}
-                p.news__title #{item.name}
-                a.hot_news__link(href="./news_one.html") 
+                p.hot_news__text #{item.name}
+                span.hot_news__link 

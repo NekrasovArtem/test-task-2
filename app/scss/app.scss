@@ -1,5 +1,11 @@
 @import "../../node_modules/vanillajs-datepicker/sass/datepicker";
 @import "../../node_modules/choices.js/src/styles/choices.scss";
+@import "../../node_modules/swiper/swiper.scss";
+@import "../../node_modules/swiper/modules/effect-fade.scss";
+@import "../../node_modules/swiper/modules/autoplay.scss";
+@import "../../node_modules/swiper/modules/pagination.scss";
+@import "../../node_modules/swiper/modules/navigation.scss";
+@import "_fonts.scss";
 @import "_variables.scss";
 @import "_extends.scss";
 @import "_mixins.scss";
@@ -11,32 +17,6 @@
 @import "one-news.scss";
 
 @media screen and (max-width: 320px) {
-    .section {
-        padding: 0 24px;
-    }
-
-    .article {
-        padding: 34px 24px 52px;
-    }
-
-    .article__slider {
-        display: none;
-    }
-
-    .article__wrapper {
-        flex-direction: column-reverse;
-    }
-
-    .article__content {
-        div {
-            p {
-                font-size: 22px;
-                font-weight: 500;
-                line-height: 28px;
-            }
-        }
-    }
-
     .latest-news__wrapper {
         padding: 22px 0 52px;
         border-top: 2px solid $primary-color;
@@ -59,28 +39,5 @@
         a {
             display: none;
         }
-    }
-
-    .releases {
-        padding: 0;
-    }
-
-    .releases__wrapper {
-        padding: 52px 24px;
-        h2 {
-            font-size: 40px;
-            font-weight: 700;
-            line-height: 40px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            margin: 0;
-        }
-    }
-
-    .releases__item {
-        display: none;
-    }
-
-    .releases__item-active {
-        display: flex;
     }
 }

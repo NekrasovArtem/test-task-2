@@ -71,31 +71,43 @@ html(lang="ru-RU")
         main.main 
             section.section.article 
                 div.article__wrapper 
-                    button.article__button_mobile="Читать" 
+                    div.article__button_mobile 
+                        button="Читать" 
                     img.article__image(src="images/news-photo.png", alt="Фото")
                     div.article__content 
                         span.article__category="Общество"
                         p.article__title="Гонка сильнейших. На стадионе имени Светланы Ишмуратовой стартовал Чемпионат по биатлону"
                         button.article__button="Читать"
                     div.swiper.article__slider 
-                        div.swiper__wrapper 
-                            div.swiper__slide
+                        div.swiper-wrapper 
+                            div.swiper-slide
                                 img.slide__img(src="images/slide-1.jpg", alt="Фото слайда")
                                 div.slide__info 
                                     span.slide__category="Нацпроект" 
                                     p.slide__title="Безопасные и качественные автомобильные дороги" 
-                        div.slider__pagination 
-                            span.active-page 
-                                span
-                            span 
-                            span 
-                            span 
-                            span 
-                        div.slider__navigation 
-                            button 
-                                img(src="images/prev-page-arrow.svg", alt="")
-                            button 
-                                img(src="images/next-page-arrow.svg", alt="")
+                            div.swiper-slide
+                                img.slide__img(src="images/slide-1.jpg", alt="Фото слайда")
+                                div.slide__info 
+                                    span.slide__category="Нацпроект" 
+                                    p.slide__title="Безопасные и качественные автомобильные дороги" 
+                            div.swiper-slide
+                                img.slide__img(src="images/slide-1.jpg", alt="Фото слайда")
+                                div.slide__info 
+                                    span.slide__category="Нацпроект" 
+                                    p.slide__title="Безопасные и качественные автомобильные дороги" 
+                            div.swiper-slide
+                                img.slide__img(src="images/slide-1.jpg", alt="Фото слайда")
+                                div.slide__info 
+                                    span.slide__category="Нацпроект" 
+                                    p.slide__title="Безопасные и качественные автомобильные дороги" 
+                            div.swiper-slide
+                                img.slide__img(src="images/slide-1.jpg", alt="Фото слайда")
+                                div.slide__info 
+                                    span.slide__category="Нацпроект" 
+                                    p.slide__title="Безопасные и качественные автомобильные дороги" 
+                        div.article__pagination 
+                        button.article__button_prev 
+                        button.article__button_next 
             section.section.hot_news 
                 div.hot_news__wrapper 
                     div.hot_news__head 
@@ -106,16 +118,22 @@ html(lang="ru-RU")
                     div.hot_news__banner 
                         img(src="images/banner.svg", alt="ЗТВ - Златоустовское телевидение")
             section.section.news 
-                div.news__wrapper 
-                    div.news__head 
-                        h2.section__title="Вектор развития"
-                        div.news__navigation 
-                            button.news__prev 
-                                img(src="images/prev-arrow.svg", alt="Предыдущая новость")
-                            button.news__next 
-                                img(src="images/next-arrow.svg", alt="Следующая новость")
-                    +createNews(news)
-                    button.section__link="Больше новостей"
+                div.news__head 
+                    h2.section__title="Вектор развития"
+                    div.news__navigation 
+                        button.news__button_prev 
+                            img(src="images/prev-arrow.svg", alt="Предыдущая новость")
+                        button.news__button_next 
+                            img(src="images/next-arrow.svg", alt="Следующая новость")
+                div.swiper.news__content 
+                    div.swiper-wrapper.news__wrapper 
+                        each item in news 
+                            div.swiper-slide.news__item 
+                                img.news__img(src=`${item.image}`, alt="Фото новости")
+                                span.news__date #{item.date}
+                                p.news__title #{item.name}
+                                a.hot_news__link(href="./news_one.html") 
+                    button.section__link_mobile="Больше новостей"
             section.section.releases
                 div.releases__wrapper 
                     h2.releases__title="Премьерные выпуски"
@@ -132,5 +150,9 @@ html(lang="ru-RU")
                             div.releases__item 
                                 span.releases__date="02/01/2021"
                                 h3.releases__name="«Депутатский час» 22.01.2021"
+                            button.releases__button_prev 
+                                img(src="./images/prev-arrow-white.svg", alt="Предыдущий выпуск")
+                            button.releases__button_next 
+                                img(src="./images/next-arrow-white.svg", alt="Следующий выпуск")
                     a.releases__button="Все выпуски"
         include includes/footer.pug

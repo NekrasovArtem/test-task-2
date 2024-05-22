@@ -10,15 +10,16 @@ export const path = {
         css: `${buildFolder}/css/`,
         js: `${buildFolder}/js`,
         images: `${buildFolder}/images/`,
+        fonts: `${buildFolder}/css/fonts/`,
         files: `${buildFolder}/*`,
     },
     src: {
         html: `${appFolder}/*.html`,
         pug: `${appFolder}/**/*.pug`,
-        css: `${appFolder}/css/*.css`,
         scss: `${appFolder}/scss/app.scss`,
         js: `${appFolder}/js/main.js`,
         images: `${appFolder}/images/*.*`,
+        fonts: `${appFolder}/fonts/*.woff2`,
         files: `${appFolder}/*`,
     },
     watch: {
