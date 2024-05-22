@@ -15,29 +15,3 @@
 @import "index.scss";
 @import "news.scss";
 @import "one-news.scss";
-
-@media screen and (max-width: 320px) {
-    .latest-news__wrapper {
-        padding: 22px 0 52px;
-        border-top: 2px solid $primary-color;
-    }
-
-    .latest-news__head {
-        h2 {
-            font-size: 40px;
-            line-height: 40px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            margin: 0;
-        }
-        a {
-            display: none;
-        }
-    }
-
-    .latest-news__content-item {
-        height: auto; 
-        a {
-            display: none;
-        }
-    }
-}
